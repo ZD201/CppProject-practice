@@ -1,0 +1,8 @@
+# ninja log v6
+17	707	7729669413952429	CMakeFiles/ExprCalc.dir/main.cpp.obj	104dca5b478ca2ca
+54	173	7729669411309587	clean	df45909c6c3badf5
+707	1087	7729669420858123	ExprCalc.exe	ed949cbf5b4a19ff
+2	918	7729678176893869	build.ninja	e67f9202346d05a5
+5	837	7729678430719551	CMakeFiles/ExprCalc.dir/main.cpp.obj	104dca5b478ca2ca
+77	887	7729678431441036	CMakeFiles/ExprCalc.dir/src/lexer.cpp.obj	eb965d97feddf31b
+887	1346	7729678439543721	ExprCalc.exe	4ae9052356fe8be8
