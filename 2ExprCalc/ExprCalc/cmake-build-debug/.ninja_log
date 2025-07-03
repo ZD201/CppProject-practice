@@ -1,8 +1,11 @@
 # ninja log v6
-17	707	7729669413952429	CMakeFiles/ExprCalc.dir/main.cpp.obj	104dca5b478ca2ca
-54	173	7729669411309587	clean	df45909c6c3badf5
-707	1087	7729669420858123	ExprCalc.exe	ed949cbf5b4a19ff
-2	918	7729678176893869	build.ninja	e67f9202346d05a5
-5	837	7729678430719551	CMakeFiles/ExprCalc.dir/main.cpp.obj	104dca5b478ca2ca
-77	887	7729678431441036	CMakeFiles/ExprCalc.dir/src/lexer.cpp.obj	eb965d97feddf31b
-887	1346	7729678439543721	ExprCalc.exe	4ae9052356fe8be8
+2	1315	7730589511228992	CMakeFiles/ExprCalc.dir/main.cpp.obj	104dca5b478ca2ca
+156	1286	7730589512773180	CMakeFiles/ExprCalc.dir/src/lexer.cpp.obj	eb965d97feddf31b
+292	1693	7730589514134530	CMakeFiles/ExprCalc.dir/src/shunting_yard.cpp.obj	c5d5247f7d431edc
+1693	2405	7730589528142839	ExprCalc.exe	9c74bcbc0f29b259
+26	944	7730645992939053	build.ninja	e67f9202346d05a5
+350	1326	7730645998595600	CMakeFiles/ExprCalc.dir/src/symbol_table.cpp.obj	5c293f37d699c80b
+39	1357	7730645995491435	CMakeFiles/ExprCalc.dir/main.cpp.obj	104dca5b478ca2ca
+207	1381	7730645997173150	CMakeFiles/ExprCalc.dir/src/evaluator.cpp.obj	288302b30af63730
+118	1437	7730645996278885	CMakeFiles/ExprCalc.dir/src/shunting_yard.cpp.obj	c5d5247f7d431edc
+1437	2301	7730646009477007	ExprCalc.exe	a4112f9b0372c4d6

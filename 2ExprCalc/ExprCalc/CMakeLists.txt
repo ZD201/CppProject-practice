@@ -9,10 +9,16 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 set(SOURCE_DIR "${CMAKE_SOURCE_DIR}/src")
 set(SOURCES
         ${SOURCE_DIR}/lexer.cpp
+        ${SOURCE_DIR}/shunting_yard.cpp
+        ${SOURCE_DIR}/evaluator.cpp
+        ${SOURCE_DIR}/symbol_table.cpp
 )
 set(HEADERS
         ${SOURCE_DIR}/token.h
         ${SOURCE_DIR}/lexer.h
+        ${SOURCE_DIR}/shunting_yard.h
+        ${SOURCE_DIR}/evaluator.h
+        ${SOURCE_DIR}/symbol_table.h
 )
 
 # 可执行目标
