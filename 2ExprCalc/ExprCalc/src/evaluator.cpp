@@ -1,5 +1,5 @@
 #include "evaluator.h"
-#include <stdexcept>
+#include "error.h"
 #include <cmath>
 
 namespace exprcalc {
@@ -22,8 +22,7 @@ namespace exprcalc {
 
                 case TokenType::OPERATOR: {
                     if (stack.size() < 2) {
-                        throw std::runtime_error("Insufficient operands for operator " + token.value +
-                                                 " at position " + std::to_string(token.position));
+                        throw CalculationError("Insufficient operands for operator " + token.value, token.position);
                     }
                     double b = stack.top(); stack.pop();
                     double a = stack.top(); stack.pop();
@@ -32,12 +31,12 @@ namespace exprcalc {
                 }
 
                 default:
-                    throw std::runtime_error("Invalid token in RPN at position " + std::to_string(token.position));
+                    throw CalculationError("Invalid token in RPN", token.position);
             }
         }
 
         if (stack.size() != 1) {
-            throw std::runtime_error("Invalid RPN expression: too many operands");
+            throw CalculationError("Invalid RPN expression: too many operands", 0);
         }
         return stack.top();
     }
@@ -47,13 +46,10 @@ namespace exprcalc {
         if (op == "-") return a - b;
         if (op == "*") return a * b;
         if (op == "/") {
-            if (b == 0) throw std::runtime_error("Division by zero");
+            if (b == 0) throw CalculationError("Division by zero", 0);
             return a / b;
         }
-        throw std::runtime_error("Unknown operator: " + op);
+        throw CalculationError("Unknown operator: " + op, 0);
     }
 
 } // namespace exprcalc
-
-
-111

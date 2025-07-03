@@ -1,5 +1,5 @@
 #include "symbol_table.h"
-#include <stdexcept>
+#include "error.h"
 
 namespace exprcalc {
 
@@ -10,7 +10,7 @@ namespace exprcalc {
     double SymbolTable::get_variable(const std::string& name) const {
         auto it = variables_.find(name);
         if (it == variables_.end()) {
-            throw std::runtime_error("Undefined variable: " + name);
+            throw CalculationError("Undefined variable: " + name, 0);
         }
         return it->second;
     }

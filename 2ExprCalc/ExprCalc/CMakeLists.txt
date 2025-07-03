@@ -12,6 +12,8 @@ set(SOURCES
         ${SOURCE_DIR}/shunting_yard.cpp
         ${SOURCE_DIR}/evaluator.cpp
         ${SOURCE_DIR}/symbol_table.cpp
+        ${SOURCE_DIR}/calculator.cpp
+        ${SOURCE_DIR}/logger.cpp
 )
 set(HEADERS
         ${SOURCE_DIR}/token.h
@@ -19,6 +21,9 @@ set(HEADERS
         ${SOURCE_DIR}/shunting_yard.h
         ${SOURCE_DIR}/evaluator.h
         ${SOURCE_DIR}/symbol_table.h
+        ${SOURCE_DIR}/calculator.h
+        ${SOURCE_DIR}/error.h
+        ${SOURCE_DIR}/logger.h
 )
 
 # 可执行目标

@@ -1,6 +1,6 @@
 #include "lexer.h"
+#include "error.h"
 #include <cctype>
-#include <stdexcept>
 
 namespace exprcalc {
 
@@ -59,7 +59,7 @@ namespace exprcalc {
             return Token(TokenType::VARIABLE, var, start_pos);
         }
 
-        throw std::runtime_error("Invalid character at position " + std::to_string(pos_));
+        throw CalculationError("Invalid character: " + std::string(1, current), pos_);
     }
 
 } // namespace exprcalc

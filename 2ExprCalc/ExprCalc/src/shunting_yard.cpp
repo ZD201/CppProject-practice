@@ -1,4 +1,5 @@
 #include "shunting_yard.h"
+#include "error.h"
 #include <stdexcept>
 
 namespace exprcalc {
@@ -43,7 +44,7 @@ std::vector<Token> ShuntingYard::to_rpn() {
                     operators.pop();
                 }
                 if (operators.empty()) {
-                    throw std::runtime_error("Mismatched parentheses at position " + std::to_string(token.position));
+                    throw CalculationError("Mismatched parentheses", token.position);
                 }
                 operators.pop(); // 移除左括号
                 break;
@@ -52,7 +53,7 @@ std::vector<Token> ShuntingYard::to_rpn() {
 
     while (!operators.empty()) {
         if (operators.top().type == TokenType::LEFT_PAREN) {
-            throw std::runtime_error("Mismatched parentheses at position " + std::to_string(operators.top().position));
+            throw CalculationError("Mismatched parentheses", operators.top().position);
         }
         output.push_back(operators.top());
         operators.pop();
