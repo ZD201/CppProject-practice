@@ -1,0 +1,28 @@
+Detecting compiler hash for triplet x64-windows...
+-- Automatically setting %HTTP(S)_PROXY% environment variables to "127.0.0.1:59180".
+Compiler found: D:/Software/VisualStudio/VC/Tools/MSVC/14.42.34433/bin/Hostx64/x64/cl.exe
+The following packages will be built and installed:
+    fmt:x64-windows@11.0.2#1
+  * vcpkg-cmake:x64-windows@2024-04-23
+  * vcpkg-cmake-config:x64-windows@2024-05-23
+Additional packages (*) will be modified to complete this operation.
+Restored 3 package(s) from C:\Users\Lenovo\AppData\Local\vcpkg\archives in 390 ms. Use --debug to see more details.
+Installing 1/3 vcpkg-cmake-config:x64-windows@2024-05-23...
+Elapsed time to handle vcpkg-cmake-config:x64-windows: 6.24 ms
+vcpkg-cmake-config:x64-windows package ABI: 25ceb3c3f07021ecff5b2917a7dbecacd03e3346e3e0215f69f606aa7f0f2414
+Installing 2/3 vcpkg-cmake:x64-windows@2024-04-23...
+Elapsed time to handle vcpkg-cmake:x64-windows: 14.3 ms
+vcpkg-cmake:x64-windows package ABI: 96cd7d796510e17c25726b858d61e4e32163a763da296ccdac48e765f6559955
+Installing 3/3 fmt:x64-windows@11.0.2#1...
+Elapsed time to handle fmt:x64-windows: 20.2 ms
+fmt:x64-windows package ABI: 69b4da407f98015516ac82e871f473e8cb15b7f047406d10c4e73799f91ef08f
+Total install time: 40.9 ms
+The package fmt provides CMake targets:
+
+    find_package(fmt CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE fmt::fmt)
+
+    # Or use the header-only version
+    find_package(fmt CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE fmt::fmt-header-only)
+
