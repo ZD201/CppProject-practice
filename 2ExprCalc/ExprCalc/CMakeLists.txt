@@ -26,6 +26,18 @@ set(HEADERS
         ${SOURCE_DIR}/logger.h
 )
 
-# 可执行目标
+# 主程序
 add_executable(ExprCalc main.cpp ${SOURCES} ${HEADERS})
 target_include_directories(ExprCalc PRIVATE ${SOURCE_DIR})
+
+# GoogleTest 配置
+find_package(GTest CONFIG REQUIRED)
+enable_testing()
+set(TEST_SOURCES
+        ${CMAKE_SOURCE_DIR}/tests/test_lexer.cpp
+        ${CMAKE_SOURCE_DIR}/tests/test_calculator.cpp
+)
+add_executable(ExprCalcTests ${TEST_SOURCES} ${SOURCES} ${HEADERS})
+target_include_directories(ExprCalcTests PRIVATE ${SOURCE_DIR})
+target_link_libraries(ExprCalcTests PRIVATE GTest::gtest GTest::gtest_main)
+add_test(NAME ExprCalcTests COMMAND ExprCalcTests)
